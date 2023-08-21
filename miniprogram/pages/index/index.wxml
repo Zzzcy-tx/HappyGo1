@@ -1,5 +1,6 @@
 <view class="notice-container">
   <div class="overlap-container">
+    <!-- <image src="" mode=""/> -->
     <image class="notice-title-backgrd">"/img/whitebg"</image> 
     <text class="notice-title">公告栏：</text> 
   </div>
@@ -15,13 +16,13 @@
 <swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay
   interval="3000" circular>
   <swiper-item>
-    <image class="originalRatio" src="/img/1.jpg"></image>
+    <image mode="aspectFill" lazy-load="true" src="/img/1.jpg"></image>
   </swiper-item>
   <swiper-item>
-    <image class="originalRatio" src="/img/2.jpg"></image>
+    <image mode="aspectFill" lazy-load="true" src="/img/2.jpg"></image>
   </swiper-item>
   <swiper-item>
-    <image class="originalRatio" src="/img/3.jpg"></image>
+    <image mode="aspectFill" lazy-load="true"  src="/img/3.jpg"></image>
   </swiper-item>
 </swiper>
 

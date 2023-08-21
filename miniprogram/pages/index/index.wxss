@@ -70,15 +70,10 @@
   display: flex;
   justify-content: center; /* 在主轴上水平居中 */
   align-items: center; /* 在交叉轴上垂直居中 */
-  height: 480rpx;
+  height: 340rpx;
   width: 750rpx;
   z-index: 3;
 
-}
-
-.originalRatio {
-  width: 100%; /* 设置宽度为 100%，使图片填充容器宽度 */
-  aspect-ratio: 1; /* 设置宽高比为 1:1，保持原比例 */
 }
 
 .banner image {
