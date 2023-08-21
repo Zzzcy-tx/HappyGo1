@@ -15,13 +15,13 @@
 <swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay
   interval="3000" circular>
   <swiper-item>
-    <image src="/img/1.jpg"></image>
+    <image class="originalRatio" src="/img/1.jpg"></image>
   </swiper-item>
   <swiper-item>
-    <image src="/img/2.jpg"></image>
+    <image class="originalRatio" src="/img/2.jpg"></image>
   </swiper-item>
   <swiper-item>
-    <image src="/img/3.jpg"></image>
+    <image class="originalRatio" src="/img/3.jpg"></image>
   </swiper-item>
 </swiper>
 
@@ -49,11 +49,11 @@
     <text>喝</text>
   </view>
   <view bindtap="goSever03" class="Sever01">
-    <image src="/img/Sever03.PNG"></image>
+    <image src="/img/sever02.jpg"></image>
     <text>玩</text>
   </view>
   <view bindtap="goSever04" class="Sever02">
-    <image src="/img/Sever03.PNG"></image>
+    <image src="/img/Sever01.jpg"></image>
     <text>乐</text>
   </view>
   <!-- <view bindtap="goSever03" class="Sever03">
