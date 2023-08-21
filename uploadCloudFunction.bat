@@ -1,0 +1,1 @@
+"I:\Program Files\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-5g85yvcr970da140 --n quickstartFunctions --r --project "F:\zcyzc\Wechat mini prog\HappyGo\HappyGo Beta1" --report_first --report

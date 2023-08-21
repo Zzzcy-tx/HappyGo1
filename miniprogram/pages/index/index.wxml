@@ -1,0 +1,63 @@
+<view class="notice-container">
+  <div class="overlap-container">
+    <image class="notice-title-backgrd">"/img/whitebg"</image> 
+    <text class="notice-title">公告栏：</text> 
+  </div>
+  <view class="notice-scroll-inner" animation="{{scrollAnimation}}">
+    <view class="notice-item">
+      <image class="notice-icon" src="/images/notice-icon.png"></image>
+      <text class="notice-text">{{Notice}}</text>
+    </view>
+  </view>
+</view>
+
+
+<swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay
+  interval="3000" circular>
+  <swiper-item>
+    <image src="/img/1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/img/2.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/img/3.jpg"></image>
+  </swiper-item>
+</swiper>
+
+
+<!-- <view bindtap="showSchool" class="chooseSchool">
+  <image src="/img/chooseSchool.jpg"></image>
+  <view class="school" id="{{index}}">
+    {{test.default}}
+  </view>
+</view>
+<view class="option" hidden="{{test.hidden}}" bindtap="SelectVal">
+  <view class="school02" wx:for="{{test.txt}}" wx:key="key" wx:for-item="test_item" data-index="{{index}}" wx:for-index="index">
+    {{test_item}}
+  </view>
+</view> -->
+
+
+<view class="chooseService">
+  <view bindtap="goSever01" class="Sever01">
+    <image src="/img/Sever01.jpg"></image>
+    <text>吃</text>
+  </view>
+  <view bindtap="goSever02" class="Sever02">
+    <image src="/img/sever02.jpg"></image>
+    <text>喝</text>
+  </view>
+  <view bindtap="goSever03" class="Sever01">
+    <image src="/img/Sever03.PNG"></image>
+    <text>玩</text>
+  </view>
+  <view bindtap="goSever04" class="Sever02">
+    <image src="/img/Sever03.PNG"></image>
+    <text>乐</text>
+  </view>
+  <!-- <view bindtap="goSever03" class="Sever03">
+    <image src="/img/Sever03.jpg"></image>
+    <text>我要帮忙</text>
+  </view> -->
+</view>

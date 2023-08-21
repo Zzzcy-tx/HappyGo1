@@ -1,0 +1,246 @@
+.notice-container {
+  background-color: rgb(255, 250, 178);
+  display: flex;
+  align-items: center;
+  padding: 0rpx;
+}
+
+.overlap-container {
+  position: absolute;
+  width: 11%;
+  height: 8mm;
+  z-index: 1;
+}
+
+.notice-title-backgrd{
+  position:absolute;
+  height: 10mm;
+  width: 100%;
+  background-color: rgb(255, 250, 178); /* 设置不透明的背景颜色 */
+}
+
+.notice-title {
+  position: relative;
+  align-items: center;
+  font-size: 20rpx;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-right: 0rpx; /* 适当的间距 */
+  margin-left: 10rpx;
+  white-space: nowrap; /* 防止子项换行 */
+}
+
+.notice-scroll {
+  display: flex;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  align-items: center;
+  white-space: nowrap; /* 防止子项换行 */
+  overflow: hidden; /* 隐藏溢出内容 */
+}
+
+.notice-scroll {
+  width: 100%;
+  overflow: hidden;
+}
+
+.notice-scroll-inner {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.notice-item {
+  display: flex;
+  align-items: center;
+  margin-right: 16rpx; /* 适当的间距 */
+}
+
+.notice-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+
+.notice-text {
+  font-size: 16rpx;
+}
+
+/* /公告栏/ */
+.banner {
+  position: relative;
+  height: 480rpx;
+  width: 750rpx;
+  z-index: 3;
+
+}
+.banner image {
+  height: 480rpx;
+  width: 100%;
+  z-index: 4;
+
+}
+
+.chooseSchool {
+  display: flex;
+  height: 100rpx;
+  width: 650rpx;
+  background-color: #fff;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  position: absolute;
+  top: 430rpx;
+  left: 50rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.chooseService {
+  /* height: 920rpx; */
+  width: 700rpx;
+  margin-left: 25rpx;
+  margin-top: 40rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+
+}
+
+.Sever01 {
+  float: left;
+}
+
+.Sever02 {
+  float: right;
+}
+
+/* .Sever03 {
+  background-color: #fff;
+  float: left;
+  margin-top: 10rpx;
+  height: 180rpx;
+  width: 700rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  display: flex;
+
+} */
+
+/* .Sever03 {
+  background-color: #fff;
+  float: left;
+  margin-top: 10rpx;
+  height: 180rpx;
+  width: 345rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  display: flex;
+
+} */
+
+.Sever01,
+.Sever02 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 345rpx;
+  width: 345rpx;
+  justify-content: center; /* 在主轴上水平居中 */
+  align-items: center; /* 在交叉轴上垂直居中 */
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  text-align: center;
+  margin-bottom: 1.6mm;
+
+}
+
+.server03,
+.server04{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 345rpx;
+  width: 345rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  text-align: center;
+}
+
+.chooseSchool image {
+
+  height: 60rpx;
+  width: 60rpx;
+
+}
+
+.chooseSchool text {
+  position: relative;
+  left: 120rpx;
+  bottom: 20rpx;
+}
+
+.Sever01 image {
+  height: 230rpx;
+  width: 230rpx;
+  /* margin: 30rpx 57.5rpx 0; */
+}
+.Sever02 image {
+  height: 230rpx;
+  width: 230rpx;
+  /* margin: 30rpx 0 0 80rpx; */
+}
+/* .Sever03 image {
+  height: 180rpx;
+  width: 180rpx;
+  margin-left: 100rpx;
+} */
+
+.Sever03 image {
+  height: 230rpx;
+  width: 230rpx;
+  margin: 30rpx 57.5rpx 0;
+}
+.Sever04 image {
+  height: 230rpx;
+  width: 230rpx;
+  margin: 30rpx 57.5rpx 0;}
+
+.Sever03 text {
+  text-align: center;
+}
+
+
+
+.option {
+  height: 185rpx;
+  width: 650rpx;
+  background-color: gold;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  position: absolute;
+  top: 530rpx;
+  left: 50rpx;
+  font-size: 55rpx;
+  text-align: center;
+}
+
+.school {
+  flex: 0 1 250rpx;
+  text-align: center;
+  margin-right: 50rpx;
+  font-size: 35rpx;
+
+}
+
+.school02 {
+  padding: 10rpx;
+}
