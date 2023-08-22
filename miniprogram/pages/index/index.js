@@ -76,22 +76,22 @@ Page({
 
   goSever01() {
     wx.navigateTo({
-      url: '/pages/eat1/eat1',
+      url: '/pages/sevices/1eat/eat',
     })
   },
   goSever02() {
     wx.navigateTo({
-      url: '/pages/service02/service02',
+      url: '/pages/sevices/2drink/drink',
     })
   },
   goSever03() {
     wx.navigateTo({
-      url: '/pages/service03/service03',
+      url: '/pages/sevices/3play/play',
     })
   },
   goSever04() {
     wx.navigateTo({
-      url: '/pages/service03/service03',
+      url: '/pages/sevices/4fun/fun',
     })
   },
 

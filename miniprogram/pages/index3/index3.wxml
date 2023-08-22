@@ -1,2 +1,14 @@
-<!--pages/index3/index3.wxml-->
-<text>pages/index3/index3.wxml</text>
+
+<view class="bar-box" style="height: 25%;">
+    <view class="level" style="margin-top: {{barHeight}}px;">
+        <view class="level bar" bindtap="headClick" wx:if="true">
+            <image class="top-head" src="/img/1.jpg" mode="widthFix"></image>
+            <view class="welcome">
+                <text class="nick">JefferyTan</text>
+                <text class="acount">189****8888</text>
+            </view>
+        </view>
+        <view class="bar-title" wx:else>个人中心</view>
+    </view>
+</view>
+

@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/index2/index2",
     "pages/index3/index3",
-    
     "pages/getOpenId/index",
     "pages/getMiniProgramCode/index",
     "pages/deployService/index",
@@ -14,7 +13,11 @@
     "pages/updateRecordResult/index",
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
-    "pages/sumRecordResult/index"
+    "pages/sumRecordResult/index",
+    "pages/services/1eat/eat",
+    "pages/services/2drink/drink",
+    "pages/services/3play/play",
+    "pages/services/4fun/fun"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -26,18 +29,18 @@
   "tabBar": {
     "borderStyle": "black",
     "list": [
-        {
-            "pagePath": "pages/index/index",
-            "text": "首页"
-        },
-        {
-            "pagePath": "pages/index2/index2",
-            "text": "???"
-        },
-        {
-            "pagePath": "pages/index3/index3",
-            "text": "我的"
-        }
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index2/index2",
+        "text": "???"
+      },
+      {
+        "pagePath": "pages/index3/index3",
+        "text": "我的"
+      }
     ]
   },
   "lazyCodeLoading": "requiredComponents",
