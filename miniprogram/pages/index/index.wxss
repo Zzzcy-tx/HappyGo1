@@ -23,7 +23,7 @@
 
 
 .notice-container {
-  background-color: rgb(255, 250, 178);
+  background-color: #eaf1ff;
   display: flex;
   align-items: center;
   padding: 0rpx;
@@ -40,7 +40,7 @@
   position:absolute;
   height: 10mm;
   width: 100%;
-  background-color: rgb(255, 250, 178); /* 设置不透明的背景颜色 */
+  background-color: #eaf1ff; /* 设置不透明的背景颜色 */
 }
 
 .notice-title {
