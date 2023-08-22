@@ -1,3 +1,13 @@
+
+.setBkGrd{
+  min-height: 100vh; 
+  background-color: #eaf1ff;
+  display: flex;
+  flex-direction: column;
+  /* background-image: url("https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/bkGrd.jpeg?sign=43b11c970f97dfcfd151cd45023ca040&t=1692698312"); */
+}
+
+
 .wxtitle{
   position: fixed;
   z-index: 999999;
@@ -118,10 +128,6 @@
   display: float;
   width: auto;
   margin-top: 40rpx;
-  border-bottom-left-radius: 15rpx;
-  border-bottom-right-radius: 15rpx;
-  border-top-left-radius: 15rpx;
-  border-top-right-radius: 15rpx;
 
 }
 
@@ -137,8 +143,9 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  height: 345rpx;
-  width: 345rpx;
+  width: 40.5%;
+  height: auto;
+  background-color: blanchedalmond;
   justify-content: center; /* 在主轴上水平居中 */
   align-items: center; /* 在交叉轴上垂直居中 */
   border-bottom-left-radius: 25rpx;
@@ -146,36 +153,19 @@
   border-top-left-radius: 25rpx;
   border-top-right-radius: 25rpx;
   text-align: center;
-  margin-bottom: 1.6mm;
-
+  margin-bottom: 5mm;
 }
 
-.server03,
-.server04{
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  height: 345rpx;
-  width: 345rpx;
-  border-bottom-left-radius: 15rpx;
-  border-bottom-right-radius: 15rpx;
-  border-top-left-radius: 15rpx;
-  border-top-right-radius: 15rpx;
-  text-align: center;
+.Sever01{
+  margin-left: 7%;
+  margin-right: 2.5%;
 }
 
-.chooseSchool image {
-
-  height: 60rpx;
-  width: 60rpx;
-
+.Sever02{
+  margin-right: 7%;
+  margin-left: 2.5%;
 }
 
-.chooseSchool text {
-  position: relative;
-  left: 120rpx;
-  bottom: 20rpx;
-}
 
 .Sever01 image {
   height: 230rpx;
@@ -187,24 +177,13 @@
   width: 230rpx;
   /* margin: 30rpx 0 0 80rpx; */
 }
-/* .Sever03 image {
-  height: 180rpx;
-  width: 180rpx;
-  margin-left: 100rpx;
-} */
 
-.Sever03 image {
-  height: 230rpx;
-  width: 230rpx;
-  margin: 30rpx 57.5rpx 0;
-}
-.Sever04 image {
-  height: 230rpx;
-  width: 230rpx;
-  margin: 30rpx 57.5rpx 0;}
 
-.Sever03 text {
+.serverText{
+  text-shadow: #fff;
   text-align: center;
+  margin-bottom: 10%;
+  margin-top: 3%;
 }
 
 

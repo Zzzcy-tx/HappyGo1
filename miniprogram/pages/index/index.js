@@ -36,24 +36,24 @@ Page({
   },
 
 
-  goSever01() {
+  goServer01() {
     wx.navigateTo({
-      url: '/pages/sevices/1eat/eat',
+      url: '/pages/services/1eat/eat',
     })
   },
-  goSever02() {
+  goServer02() {
     wx.navigateTo({
-      url: '/pages/sevices/2drink/drink',
+      url: '/pages/services/2drink/drink',
     })
   },
-  goSever03() {
+  goServer03() {
     wx.navigateTo({
-      url: '/pages/sevices/3play/play',
+      url: '/pages/services/3play/play',
     })
   },
-  goSever04() {
+  goServer04() {
     wx.navigateTo({
-      url: '/pages/sevices/4fun/fun',
+      url: '/pages/services/4fun/fun',
     })
   },
 

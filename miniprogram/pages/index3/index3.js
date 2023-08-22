@@ -32,7 +32,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    
+    var that = this;
+    // 胶囊信息
+    var menu = wx.getMenuButtonBoundingClientRect();
+    wx.getSystemInfo({
+        success(res) {
+            that.setData({
+                barHeight: res.statusBarHeight,
+                navBarHeight: menu.top + menu.height
+            })
+        }
+    })
   },
 
   /**
@@ -46,17 +56,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    var that = this;
-    // 胶囊信息
-    var menu = wx.getMenuButtonBoundingClientRect();
-    wx.getSystemInfo({
-        success(res) {
-            that.setData({
-                barHeight: res.statusBarHeight,
-                navBarHeight: menu.top + menu.height
-            })
-        }
-    })
+    
   },
 
   /**

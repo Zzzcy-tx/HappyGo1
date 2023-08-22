@@ -1,53 +1,54 @@
-
-<view class="notice-container">
-  <div class="overlap-container">
-    <!-- <image src="" mode=""/> -->
-    <image class="notice-title-backgrd">"/img/whitebg"</image> 
-    <text class="notice-title">公告栏：</text> 
-  </div>
-  <view class="notice-scroll-inner" animation="{{scrollAnimation}}">
-    <view class="notice-item">
-      <image class="notice-icon" src="/images/notice-icon.png"></image>
-      <text class="notice-text">{{Notice}}</text>
+<view class="setBkGrd">
+  <view class="notice-container">
+    <div class="overlap-container">
+      <!-- <image src="" mode=""/> -->
+      <image class="notice-title-backgrd">"/img/whitebg"</image> 
+      <text class="notice-title">公告栏：</text> 
+    </div>
+    <view class="notice-scroll-inner" animation="{{scrollAnimation}}">
+      <view class="notice-item">
+        <image class="notice-icon" src="/images/notice-icon.png"></image>
+        <text class="notice-text">{{Notice}}</text>
+      </view>
     </view>
   </view>
-</view>
 
 
-<swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay
-  interval="3000" circular>
-  <swiper-item>
-    <image mode="aspectFill" lazy-load="true" src="/img/1.jpg"></image>
-  </swiper-item>
-  <swiper-item>
-    <image mode="aspectFill" lazy-load="true" src="/img/2.jpg"></image>
-  </swiper-item>
-  <swiper-item>
-    <image mode="aspectFill" lazy-load="true"  src="/img/3.jpg"></image>
-  </swiper-item>
-</swiper>
+  <swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay
+    interval="3000" circular>
+    <swiper-item>
+      <image mode="aspectFill" lazy-load="true" src="/img/1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="aspectFill" lazy-load="true" src="/img/2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="aspectFill" lazy-load="true"  src="/img/3.jpg"></image>
+    </swiper-item>
+  </swiper>
 
 
 
-<view class="chooseService">
-  <view bindtap="goSever01" class="Sever01">
-    <image src="/img/Sever01.jpg"></image>
-    <text>吃</text>
+  <view class="chooseService">
+    <view bindtap="goServer01" class="Sever01">
+      <image src="/img/server02.png"></image>
+      <text class="serverText">吃</text>
+    </view>
+    <view bindtap="goServer02" class="Sever02">
+      <image src="/img/server02.png"></image>
+      <text class="serverText">喝</text>
+    </view>
+    <view bindtap="goServer03" class="Sever01">
+      <image src="/img/server02.png"></image>
+      <text class="serverText">玩</text>
+    </view>
+    <view bindtap="goServer04" class="Sever02">
+      <image src="/img/server02.png"></image>
+      <text class="serverText">乐</text>
+    </view>
+    <!-- <view bindtap="goSever03" class="Sever03">
+      <image src="/img/Sever03.jpg"></image>
+      <text>我要帮忙</text>
+    </view> -->
   </view>
-  <view bindtap="goSever02" class="Sever02">
-    <image src="/img/sever02.jpg"></image>
-    <text>喝</text>
-  </view>
-  <view bindtap="goSever03" class="Sever01">
-    <image src="/img/sever02.jpg"></image>
-    <text>玩</text>
-  </view>
-  <view bindtap="goSever04" class="Sever02">
-    <image src="/img/Sever01.jpg"></image>
-    <text>乐</text>
-  </view>
-  <!-- <view bindtap="goSever03" class="Sever03">
-    <image src="/img/Sever03.jpg"></image>
-    <text>我要帮忙</text>
-  </view> -->
 </view>
