@@ -16,7 +16,7 @@ page {
 /* 状态栏 */
 .bar-box {
   background-image: url("https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/bkGrd.jpeg?sign=32d3b3de7c8a5b10aab9de91b64f88f8&t=1692708725");
-  background-color: #2979ff;
+  background-color: #f1f1f1;
   position: static;
   top: 0;
   left: 0;

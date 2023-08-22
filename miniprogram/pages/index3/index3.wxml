@@ -2,11 +2,21 @@
   <view class="bar-box" style="height: 20%;">
       <view class="level" style="margin-top: {{barHeight*2}}px;">
           <view class="level bar" bindtap="headClick" wx:if="true">
-              <image class="top-head" src="/img/1.jpg"></image>
+            <block wx:if="{{!hasUserInfo}}">
+              <image wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class="top-head" src="/img/1.jpg"></image>
+              <image wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="top-head" src="/img/1.jpg"></image>
               <view class="welcome">
-                  <text class="nick">UserName</text>
-                  <text class="acount">18874151574</text>
+                  <text class="nick">{{nickName}}</text>
+                  <text class="acount">{{userInfo.number}}</text>
               </view>
+            </block>
+            <block wx:else>
+              <image class="top-head" src="{{userInfo.avatarUrl}}"></image>
+              <view class="welcome">
+                  <text class="nick">{{userInfo.nickName}}</text>
+                  <text class="acount">{{userInfo.number}}</text>
+              </view>
+            </block>
           </view>
         <view class="bar-title" wx:else>个人中心</view>
       </view>
@@ -14,7 +24,7 @@
 
   <view class="list">
     <view class="disBox">
-      <view class="listBox">
+      <view bindtap="studentIdentify" class="listBox">
         <image class="listImg" mode="aspectFit" src="/img/listBoxIcon1.png"/>
         <text class="listText">学生身份认证</text>
       </view>
