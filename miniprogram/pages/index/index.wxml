@@ -1,3 +1,4 @@
+
 <view class="notice-container">
   <div class="overlap-container">
     <!-- <image src="" mode=""/> -->
@@ -26,18 +27,6 @@
   </swiper-item>
 </swiper>
 
-
-<!-- <view bindtap="showSchool" class="chooseSchool">
-  <image src="/img/chooseSchool.jpg"></image>
-  <view class="school" id="{{index}}">
-    {{test.default}}
-  </view>
-</view>
-<view class="option" hidden="{{test.hidden}}" bindtap="SelectVal">
-  <view class="school02" wx:for="{{test.txt}}" wx:key="key" wx:for-item="test_item" data-index="{{index}}" wx:for-index="index">
-    {{test_item}}
-  </view>
-</view> -->
 
 
 <view class="chooseService">

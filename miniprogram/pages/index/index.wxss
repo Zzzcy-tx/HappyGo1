@@ -1,3 +1,17 @@
+.wxtitle{
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+.wxtitle_info{
+  font-size: 28rpx;
+}
+
+
 .notice-container {
   background-color: rgb(255, 250, 178);
   display: flex;
@@ -61,6 +75,7 @@
 }
 
 .notice-text {
+  text-align: end;
   font-size: 16rpx;
 }
 
@@ -70,7 +85,7 @@
   display: flex;
   justify-content: center; /* 在主轴上水平居中 */
   align-items: center; /* 在交叉轴上垂直居中 */
-  height: 340rpx;
+  height: 440rpx;
   width: 750rpx;
   z-index: 3;
 
@@ -100,8 +115,8 @@
 }
 
 .chooseService {
-  width: 700rpx;
-  margin-left: 25rpx;
+  display: float;
+  width: auto;
   margin-top: 40rpx;
   border-bottom-left-radius: 15rpx;
   border-bottom-right-radius: 15rpx;
@@ -110,10 +125,10 @@
 
 }
 
-.Sever01 {
+.Sever01{
   float: left;
 }
-.Sever02 {
+.Sever02{
   float: right;
 }
 
@@ -126,10 +141,10 @@
   width: 345rpx;
   justify-content: center; /* 在主轴上水平居中 */
   align-items: center; /* 在交叉轴上垂直居中 */
-  border-bottom-left-radius: 15rpx;
-  border-bottom-right-radius: 15rpx;
-  border-top-left-radius: 15rpx;
-  border-top-right-radius: 15rpx;
+  border-bottom-left-radius: 25rpx;
+  border-bottom-right-radius: 25rpx;
+  border-top-left-radius: 25rpx;
+  border-top-right-radius: 25rpx;
   text-align: center;
   margin-bottom: 1.6mm;
 
