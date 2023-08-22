@@ -23,7 +23,7 @@ Page({
 
   data: {
     show: false,
-    barHeight: 40, //  顶部状态栏高度
+    barHeight: 80, //  顶部状态栏高度
     navBarHeight: 66, // 顶部高度
 
   },

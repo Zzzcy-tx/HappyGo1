@@ -91,6 +91,7 @@
 
 /* /公告栏/ */
 .banner {
+  display: flex;
   position: relative;
   display: flex;
   justify-content: center; /* 在主轴上水平居中 */
@@ -98,7 +99,6 @@
   height: 440rpx;
   width: 750rpx;
   z-index: 3;
-
 }
 
 .banner image {
@@ -142,6 +142,7 @@
 .Sever02 {
   display: flex;
   flex-direction: column;
+  
   background-color: #fff;
   width: 40.5%;
   height: auto;

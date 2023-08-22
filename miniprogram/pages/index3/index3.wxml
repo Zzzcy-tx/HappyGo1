@@ -1,14 +1,53 @@
-
-<view class="bar-box" style="height: 25%;">
-    <view class="level" style="margin-top: {{barHeight}}px;">
-        <view class="level bar" bindtap="headClick" wx:if="true">
-            <image class="top-head" src="/img/server2.png" mode="widthFix"></image>
-            <view class="welcome">
-                <text class="nick">UserName</text>
-                <text class="acount">18874151574</text>
-            </view>
-        </view>
+<view class="index3">
+  <view class="bar-box" style="height: 20%;">
+      <view class="level" style="margin-top: {{barHeight*2}}px;">
+          <view class="level bar" bindtap="headClick" wx:if="true">
+              <image class="top-head" src="/img/1.jpg"></image>
+              <view class="welcome">
+                  <text class="nick">UserName</text>
+                  <text class="acount">18874151574</text>
+              </view>
+          </view>
         <view class="bar-title" wx:else>个人中心</view>
-    </view>
-</view>
+      </view>
+  </view>
 
+  <view class="list">
+    <view class="disBox">
+      <view class="listBox">
+        <image class="listImg" mode="aspectFit" src="/img/listBoxIcon1.png"/>
+        <text class="listText">学生身份认证</text>
+      </view>
+      <view class="divider"></view>
+      <view class="listBox">
+        <image class="listImg" mode="aspectFit" src="/img/listBoxIcon1.png"/>
+        <text class="listText">优惠券管理</text>
+      </view>
+      <view class="divider"></view>
+      <view class="listBox">
+        <image  class="listImg" src=""/>
+        <text class="listText">学生身份认证</text>
+      </view>
+      <view class="divider"></view>
+      <view class="listBox">
+        <image  class="listImg" src=""/>
+        <text class="listText">学生身份认证</text>
+      </view>
+      <view class="divider"></view>
+      <view class="listBox">
+        <image  class="listImg" src=""/>
+        <text class="listText">学生身份认证</text>
+      </view>
+      <view class="divider"></view>
+      <view class="listBox">
+        <image  class="listImg" src=""/>
+        <text class="listText">学生身份认证</text>
+      </view>
+      <view class="divider"></view>
+      <view class="listBox">
+        <image  class="listImg" src=""/>
+        <text class="listText">学生身份认证</text>
+      </view>
+    </view>
+  </view>
+</view>

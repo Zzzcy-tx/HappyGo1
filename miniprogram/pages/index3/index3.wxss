@@ -4,6 +4,10 @@ page {
   background-color: #f1f1f1;
 }
 
+.index3{
+  height: 130vh;
+}
+
 .level {
   display: flex;
   align-items: center;
@@ -11,8 +15,9 @@ page {
 
 /* 状态栏 */
 .bar-box {
+  background-image: url("https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/bkGrd.jpeg?sign=32d3b3de7c8a5b10aab9de91b64f88f8&t=1692708725");
   background-color: #2979ff;
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
@@ -36,9 +41,10 @@ page {
 }
 
 .top-head {
-  width: 15%;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #636262;
 }
 
 .welcome {
@@ -51,148 +57,15 @@ page {
 .nick {
   font-size: 28rpx;
   font-weight: bold;
+  color: black;
 }
 
 .acount {
   font-size: 22rpx;
   margin-top: 5rpx;
+  color: black;
 }
 
-.head-box {
-  background-color: #2979ff;
-  padding: 0 20rpx;
-}
-
-.head-right {
-  width: 85%;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.set-center {
-  background-color: #19be6b;
-  color: white;
-  border-radius: 50rpx;
-  font-size: 26rpx;
-  padding: 5rpx 20rpx;
-}
-
-.share-box {
-  justify-content: space-between;
-  margin-top: 8%;
-  background-color: rgb(65, 64, 64);
-  border-top-left-radius: 20rpx;
-  border-top-right-radius: 20rpx;
-  padding: 20rpx;
-}
-
-.money {
-  font-size: 30rpx;
-  color: rgb(248, 201, 70);
-}
-
-.money-text {
-  padding-left: 20rpx;
-}
-
-.share-text {
-  padding-top: 10rpx;
-  font-size: 24rpx;
-  color: rgba(248, 212, 112, 0.479);
-}
-
-.share-btn {
-  background-color: rgb(248, 201, 70);
-  color: rgb(54, 54, 54);
-  border-radius: 50rpx;
-  font-size: 26rpx;
-  padding: 5rpx 15rpx 8rpx 15rpx;
-}
-
-.sign-box {
-  margin: 0 20rpx;
-  padding: 30rpx 20rpx;
-  font-size: 30rpx;
-  color: gray;
-  justify-content: space-around;
-  border-bottom-left-radius: 20rpx;
-  border-bottom-right-radius: 20rpx;
-  background-color: white;
-}
-
-.more-box {
-  border-top-right-radius: 50rpx;
-  border-bottom-left-radius: 50rpx;
-  background-color: #fcbd71;
-  padding: 5% 30rpx;
-  font-size: 30rpx;
-  margin: 20rpx;
-  color: white;
-}
-
-/* 二级菜单 */
-.tab-box {
-  margin: 20rpx;
-  background-color: white;
-  box-shadow: 0 0 5rpx 5rpx #f1f1f1;
-  padding: 30rpx 20rpx;
-  border-radius: 20rpx;
-}
-
-.tab-list {
-  flex: 1;
-  text-align: center;
-  color: gray;
-}
-
-.tab-img {
-  width: 50%;
-}
-
-.tab-text {
-  font-size: 30rpx;
-  margin: 5rpx 0;
-}
-
-.white-box {
-  background-color: white;
-  margin: 20rpx;
-  border-radius: 20rpx;
-  padding: 0 20rpx;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  padding: 36rpx 10rpx;
-  font-size: 30rpx;
-  font-weight: inherit;
-  background-color: rgba(0, 0, 0, 0);
-  border-bottom: 1rpx solid #f1f1f1;
-}
-
-.row::after {
-  border: none;
-}
-
-.text {
-  margin-left: 15rpx;
-  color: #636262;
-}
-
-.left {
-  width: 90%;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  color: rgb(59, 59, 59);
-}
-
-.right {
-  width: 10%;
-  text-align: right;
-  color: rgb(148, 147, 147);
-}
 
 /* 商标 */
 .copy {
@@ -203,4 +76,67 @@ page {
 .copy text {
   font-size: 25rpx;
   color: gray
+}
+
+
+
+.list{
+  display: flex;
+  background-color: white;
+  border-radius: 5%;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.disBox{
+  display: flex;
+  flex-direction: column;
+  background-color:white;
+  border-radius: 5%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1mm;
+  margin-bottom: 1mm;
+  margin-left: 1mm;
+  margin-right: 1mm;
+}
+
+.listBox{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: rgb(207, 207, 207);
+  border-bottom-left-radius: 25rpx;
+  border-bottom-right-radius: 25rpx;
+  border-top-left-radius: 25rpx;
+  border-top-right-radius: 25rpx;
+
+  margin-top: 1mm;
+  margin-bottom: 1mm;
+  height: 5vh;
+  width: 100%;
+}
+
+.listImg{
+  height:100%;
+  width: 13%;
+  object-fit: contain;
+  margin-left: 1%;
+}
+
+.listText{
+  justify-content: left;
+  align-items: center;
+  white-space: nowrap;
+  margin-left: 1%;
+}
+
+.divider{
+  height: 1px;
+  width: 96%;
+  background-color: rgb(73, 73, 73);
 }
