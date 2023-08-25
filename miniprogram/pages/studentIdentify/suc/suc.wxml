@@ -4,7 +4,7 @@
 <view class="allMid">
   <image src="/img/1.jpg" mode="aspectFill" class="mid"/>
   <view bind:tap="goBackToMain" class="midButton">
-    <text class="midText">返回</text>
+    <text class="midText">确定</text>
   </view>
 </view>
 
