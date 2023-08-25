@@ -1,2 +1,12 @@
 <!--pages/studentIdentify/IDpage/IDpage.wxml-->
-<text>pages/studentIdentify/IDpage/IDpage.wxml</text>
+<!-- <text>pages/studentIdentify/IDpage/IDpage.wxml</text> -->
+
+<view class="allMid">
+  <text class="title">学生身份认证</text>
+  <!-- <text class="smallTitle">请输入身份证号：</text> -->
+  <textarea  class="idBox" placeholder="请输入文本" value=""/>
+
+
+
+  <text class="endLink">隐私声明</text>
+</view>

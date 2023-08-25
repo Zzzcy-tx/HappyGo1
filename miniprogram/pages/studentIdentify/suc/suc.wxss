@@ -1,1 +1,48 @@
 /* pages/studentIdentify/suc/suc.wxss */
+
+
+.allMid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw;
+}
+
+.mid{
+  margin-top: 10vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.midButton{
+  display: flex;
+  margin-top: 10vh;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(7, 193, 96);
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+
+}
+
+
+.midText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  margin: auto;
+
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  white-space: nowrap; /* 防止子项换行 */
+
+}

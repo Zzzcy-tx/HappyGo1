@@ -1,1 +1,49 @@
 /* pages/studentIdentify/IDpage/IDpage.wxss */
+
+
+.allMid{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  /* justify-content: center; */
+
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+.title{
+  font-size: 26px;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.smallTitle{
+  font-size: 16px; 
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.idBox{
+  width: 80%; /* 输入框的宽度 */
+  height: 23px; /* 输入框的高度 */
+  padding: 10px; /* 内边距 */
+  font-size: 18px; /* 字体大小 */
+  border: 2px solid #ccc; /* 边框样式 */
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+
+
+
+
+
+
+
+.endLink{
+  position: relative;
+}

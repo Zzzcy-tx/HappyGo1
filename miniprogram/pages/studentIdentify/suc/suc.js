@@ -62,5 +62,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  goBackToMain(){
+    wx.navigateBack({
+      url: "pages/index/index"
+    })
   }
+
 })

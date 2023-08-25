@@ -1,2 +1,10 @@
 <!--pages/studentIdentify/suc/suc.wxml-->
-<text>pages/studentIdentify/suc/suc.wxml</text>
+<!-- <text>pages/studentIdentify/suc/suc.wxml</text> -->
+
+<view class="allMid">
+  <image src="/img/1.jpg" mode="aspectFill" class="mid"/>
+  <view bind:tap="goBackToMain" class="midButton">
+    <text class="midText">返回</text>
+  </view>
+</view>
+

@@ -6,6 +6,28 @@
     "miniprogram": {
       "list": [
         {
+          "name": "id_page",
+          "pathName": "pages/studentIdentify/IDpage/IDpage",
+          "query": "",
+          "launchMode": "default",
+          "scene": null,
+          "partialCompile": {
+            "enabled": true,
+            "pages": []
+          }
+        },
+        {
+          "name": "Suc",
+          "pathName": "pages/studentIdentify/suc/suc",
+          "query": "",
+          "launchMode": "default",
+          "scene": null,
+          "partialCompile": {
+            "enabled": true,
+            "pages": []
+          }
+        },
+        {
           "name": "db guide",
           "pathName": "pages/databaseGuide/databaseGuide",
           "query": ""
