@@ -4,7 +4,7 @@
 <view class="allMid">
   <text class="title">学生身份认证</text>
   <!-- <text class="smallTitle">请输入身份证号：</text> -->
-  <textarea  class="idBox" placeholder="请输入文本" value=""/>
+  <input  class="idBox" bind:tap="idInput" placeholder="本人身份证号：" type="idcard" maxlength="18" cursor-spacing="50px" confirm-type="done"/>
 
 
 

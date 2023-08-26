@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userID: '',
+    certificatedState: "false"
   },
 
   /**
@@ -62,5 +63,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  idInput:function(e){
+    this.setData({
+      userID:e.detail.value
+    })
   }
+
 })
