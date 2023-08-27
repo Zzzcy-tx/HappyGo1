@@ -25,6 +25,7 @@ Page({
     nickName: '请点击头像登录',
     phoneNumber: '',
     hasUserInfo: false,
+    userInfo: '',
 
   },
 
@@ -43,6 +44,18 @@ Page({
             })
         }
     })
+    if (wx.getStorageSync('hasUserInfoKey') === true) {
+      this.setData({
+        hasUserInfo : true,
+        userInfo: wx.getStorageSync('userInfoKey')
+      })
+      // this.data.hasUserInfo = true;
+      // this.data.nickName = wx.getStorageSync('userInfoKey').nickName
+      wx.showToast({title: '登陆成功',icon: 'success',duration: 1000})
+    }
+    // this.data.userInfo = wx.getStorageSync('userInfoKey')
+    // console.log(this.data.userInfo.nickName)
+
   },
 
   /**
@@ -134,6 +147,17 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+
+
+
+        try{
+          wx.setStorageSync('hasUserInfoKey',this.data.hasUserInfo)
+          wx.setStorageSync('userInfoKey',this.data.userInfo)
+          console.log('数据存储成功');
+        } catch (e){
+          console.error('数据存储失败:', e);
+        }
+
         wx.showToast({title: '登陆成功',icon: 'success',duration: 2000})
       }
     })
