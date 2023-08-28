@@ -15,31 +15,34 @@
 
   <swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#ffa" autoplay interval="4000" circular>
     <swiper-item>
-      <image mode="aspectFill" lazy-load="true" src="/img/1.jpg"></image>
+      <image mode="aspectFill" lazy-load="true" src="/img/swipe1.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image mode="aspectFill" lazy-load="true" src="/img/2.jpg"></image>
+      <image mode="aspectFill" lazy-load="true" src="/img/swipe2.jpg"></image>
+    </swiper-item>
+    <swiper-item> 
+      <image mode="aspectFill" lazy-load="true"  src="/img/swipe3.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image mode="aspectFill" lazy-load="true"  src="/img/3.jpg"></image>
+      <image mode="aspectFill" lazy-load="true"  src="/img/swipe4.jpg"></image>
     </swiper-item>
   </swiper>
 
   <view class="chooseService">
     <view bindtap="goServer01" class="Sever01">
-      <image src="/img/server02.png"></image>
+      <image src="/img/chi.png"></image>
       <text class="serverText">吃</text>
     </view>
     <view bindtap="goServer02" class="Sever02">
-      <image src="/img/server02.png"></image>
+      <image src="/img/he.png"></image>
       <text class="serverText">喝</text>
     </view>
     <view bindtap="goServer03" class="Sever01">
-      <image src="/img/server02.png"></image>
+      <image src="/img/wan.png"></image>
       <text class="serverText">玩</text>
     </view>
     <view bindtap="goServer04" class="Sever02">
-      <image src="/img/server02.png"></image>
+      <image src="/img/le.png"></image>
       <text class="serverText">乐</text>
     </view>
   </view>

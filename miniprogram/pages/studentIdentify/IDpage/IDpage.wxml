@@ -1,12 +1,17 @@
 <!--pages/studentIdentify/IDpage/IDpage.wxml-->
 <!-- <text>pages/studentIdentify/IDpage/IDpage.wxml</text> -->
+<block wx:if="{{hasUserID}}">
+  <image src="/img/2.jpg" mode=""/>
+  
+</block>
+<block wx:else>
+  <view class="allMid">
+    <text class="title">学生身份认证</text>
+    <!-- <text class="smallTitle">请输入身份证号：</text> -->
+    <input  class="idBox" bindinput="idInput" placeholder="本人身份证号：" type="idcard" maxlength="18" cursor-spacing="50px" confirm-type="done"/>
+    <button bindtap="confirmID">确定</button>
 
-<view class="allMid">
-  <text class="title">学生身份认证</text>
-  <!-- <text class="smallTitle">请输入身份证号：</text> -->
-  <input  class="idBox" bind:tap="idInput" placeholder="本人身份证号：" type="idcard" maxlength="18" cursor-spacing="50px" confirm-type="done"/>
 
-
-
-  <text class="endLink">隐私声明</text>
-</view>
+    <text class="endLink">隐私声明</text>
+  </view>
+</block>
