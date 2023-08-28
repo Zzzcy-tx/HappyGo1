@@ -19,7 +19,8 @@
     "pages/services/3play/play",
     "pages/services/4fun/fun",
     "pages/studentIdentify/suc/suc",
-    "pages/studentIdentify/IDpage/IDpage"
+    "pages/studentIdentify/IDpage/IDpage",
+    "pages/myCoupon/myCoupon"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

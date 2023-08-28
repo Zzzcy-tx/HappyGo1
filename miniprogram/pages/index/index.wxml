@@ -7,7 +7,7 @@
     </div>
     <view class="notice-scroll-inner" animation="{{scrollAnimation}}">
       <view class="notice-item">
-        <image class="notice-icon" src="/images/notice-icon.png"></image>
+        <!-- <image class="notice-icon" src="/images/notice-icon.png"></image> -->
         <text class="notice-text">{{Notice}}</text>
       </view>
     </view>

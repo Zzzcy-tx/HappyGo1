@@ -133,7 +133,17 @@ Page({
       })
     } else {
       wx.showToast({title: '请点击头像登录！',icon: 'error',duration: 2000})
-      console.error(0)
+      // console.error(0)
+    }
+  },
+
+  manageCoupon() {
+    if (this.data.hasUserInfo) {
+      wx.navigateTo({
+        url: '/pages/myCoupon/myCoupon',//goto优惠券界面
+      })
+    } else {
+      wx.showToast({title: '请点击头像登录！',icon: 'error',duration: 2000})
     }
   },
 

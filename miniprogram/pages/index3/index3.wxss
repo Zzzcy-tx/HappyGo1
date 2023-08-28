@@ -15,7 +15,7 @@ page {
 
 /* 状态栏 */
 .bar-box {
-  background-image: url("https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230827150935.jpg?sign=7433fc2d172a474d9f803d37621c00e0&t=1693120453");
+  background-image: url("https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230827150935.jpg?sign=9321658e9ac3f331bb15af64c0e2882a&t=1693214936");
   background-color: #f1f1f1;
   position: static;
   top: 0;
