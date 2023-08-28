@@ -53,8 +53,6 @@ Page({
       // this.data.nickName = wx.getStorageSync('userInfoKey').nickName
       wx.showToast({title: '登陆成功',icon: 'success',duration: 1000})
     }
-    // this.data.userInfo = wx.getStorageSync('userInfoKey')
-    // console.log(this.data.userInfo.nickName)
 
   },
 
@@ -174,13 +172,40 @@ Page({
   },
 
   getUserInfo(e) {
-    // 不推荐使用 getUserInfo 获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
+    //不推荐,自2021年4月13日起，getUserInfo将不弹窗，返回匿名用户个人信息
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
   },
 
+  //调用云函数解密手机号
+  getPhoneNumber(e) {
+    console.log(e.detail.code)    // 动态令牌
+    console.log(e.detail.errMsg)  // 回调信息（成功失败都会返回）
+    console.log(e.detail.iv)  
+    console.log(e.detail.errno)   // 错误码（失败时返回）
+    if (e.detail.errMsg === "getPhoneNumber:ok" || true) {
+      const encryptedData = e.detail.encryptedData;
+      const iv = e.detail.iv;
+      
+      wx.login({
+        success: res => {
+          if (res.code) {
+            this.setData({ phoneNumber : this.getPhoneNumber({"code": res.code}) })
+            console.log(this.data.phoneNumber);
+          } else {
+            console.error('获取用户登录凭证失败:', res.errMsg);
+          }
+        },
+        fail: err => {
+          console.error('wx.login调用失败:', err);
+        }
+      });
+    } else {
+      console.log('用户拒绝授权手机号码');
+    }
+  }
 
 
 
