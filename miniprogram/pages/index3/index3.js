@@ -127,7 +127,7 @@ Page({
   studentIdentify() {
     if (this.data.hasUserInfo) {
       wx.navigateTo({
-        url: '/pages/studentIdentify/suc/suc',
+        url: '/pages/studentIdentify/IDpage/IDpage',
       })
     } else {
       wx.showToast({title: '请点击头像登录！',icon: 'error',duration: 2000})
