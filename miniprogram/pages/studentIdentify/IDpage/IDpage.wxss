@@ -17,7 +17,7 @@
 .title{
   font-size: 26px;
   text-align: center;
-  margin-top: 2vh;
+  margin-top: 5vh;
 }
 
 .smallTitle{
@@ -38,12 +38,29 @@
   border-top-right-radius: 15rpx;
 }
 
+.detailImg{
+  width: 85vw;
+  height: 24vh;
+  margin-top: 5vh;
+  margin-bottom: 12vh;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
 
+.price{
+  margin-top: 2vh;
+  margin-bottom: 15vh;
+  font-size:x-large;
+}
 
 
 
 
 
 .endLink{
-  position: relative;
+  position: absolute;
+  top: 85vh;
+  font-size: smaller;
 }

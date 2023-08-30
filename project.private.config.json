@@ -6,6 +6,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "",
+          "pathName": "pages/services/1eat/eat",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "id_page",
           "pathName": "pages/studentIdentify/IDpage/IDpage",
           "query": "",

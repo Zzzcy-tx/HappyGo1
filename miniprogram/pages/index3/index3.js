@@ -135,14 +135,13 @@ Page({
     }
   },
 
-  manageCoupon() {
-    if (this.data.hasUserInfo) {
-      wx.navigateTo({
-        url: '/pages/myCoupon/myCoupon',//goto优惠券界面
-      })
-    } else {
-      wx.showToast({title: '请点击头像登录！',icon: 'error',duration: 2000})
-    }
+  logout() {//登出
+    this.setData({
+      hasUserInfo: false,
+    })
+    wx.setStorageSync('hasUserInfo', false);
+    wx.setStorageSync('hasUserID', false);
+    wx.showToast({'title': '已退出登录', 'icon': 'none', 'duration': 1500});
   },
 
   getUserProfile(e) {

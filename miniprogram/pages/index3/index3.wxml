@@ -26,17 +26,17 @@
     <view class="disBox">
       <view bindtap="studentIdentify" class="listBox">
         <image class="listImg" mode="aspectFit" src="/img/listBoxIcon1.png"/>
-        <text class="listText">学生身份认证</text>
-      </view>
-      <view class="divider"></view>
-      <view class="listBox" bindtap="manageCoupon">
-        <image class="listImg" mode="aspectFit" src="/img/listBoxIcon1.png"/>
-        <text class="listText">优惠券管理</text>
+        <text class="listText">学生优惠认证</text>
       </view>
       <view class="divider"></view>
       <view class="listBox">
         <image class="listImg" mode="aspectFit" src="/img/listBoxIcon1.png"/>
         <text class="listText">订单管理</text>
+      </view>
+      <view class="divider"></view>
+      <view class="listBox" bindtap="logout">
+        <image class="listImg" mode="aspectFit" src="/img/listBoxIcon1.png"/>
+        <text class="listText">退出登录</text>
       </view>
       <!-- <view class="divider"></view>
       <view class="listBox">

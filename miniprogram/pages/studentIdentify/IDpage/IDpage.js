@@ -18,7 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      hasUserID : wx.getStorageSync('hasUserID')
+    })
   },
 
   /**
@@ -97,7 +99,8 @@ Page({
                 success: res => {
                   console.log('数据添加成功', res);//
                   this.setData({hasUserID : true});
-                  wx.showToast({title: '已通过验证', icon: 'none', duration: 2000})
+                  wx.showToast({title: '已通过验证', icon: 'none', duration: 2000});
+                  wx.setStorageSync('hasUserID', hasUserID)
                 },
                 fail: err => {
                   console.error('数据添加失败', err);//
@@ -107,7 +110,8 @@ Page({
 
             } else {
               this.setData({hasUserID : true});
-              wx.showToast({title: '已通过验证', icon: 'none', duration: 2000})
+              wx.showToast({title: '已通过认证', icon: 'none', duration: 2000})
+              wx.setStorageSync('hasUserID', this.data.hasUserID)
             }
             
           })

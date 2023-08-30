@@ -1,17 +1,24 @@
 <!--pages/studentIdentify/IDpage/IDpage.wxml-->
 <!-- <text>pages/studentIdentify/IDpage/IDpage.wxml</text> -->
 <block wx:if="{{hasUserID}}">
-  <image src="/img/2.jpg" mode=""/>
-  
+  <view class="allMid">
+    <text class="title">椰椰乐购会员——30天</text>
+    <image class="detailImg" src="/img/2.jpg" mode="aspectFill"/>
+    <text class="price">RMB:9.9¥</text>
+    <button type="primary" bind:tap="purchase">订购优惠</button>
+
+
+    <text class="endLink">隐私声明与用户条款</text>
+  </view>
 </block>
 <block wx:else>
   <view class="allMid">
     <text class="title">学生身份认证</text>
-    <!-- <text class="smallTitle">请输入身份证号：</text> -->
+    <!-- <text class="smallTitle">请输入身份证号：</text> --> 
     <input  class="idBox" bindinput="idInput" placeholder="本人身份证号：" type="idcard" maxlength="18" cursor-spacing="50px" confirm-type="done"/>
     <button bindtap="confirmID">确定</button>
 
-
-    <text class="endLink">隐私声明</text>
+ 
+    <text class="endLink">身份证号仅被用于年龄验证和用户唯一性标识</text>
   </view>
 </block>

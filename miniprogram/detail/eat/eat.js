@@ -1,4 +1,4 @@
-// pages/services/1eat/eat.js
+// detail/eat/eat.js
 Page({
 
   /**
@@ -6,20 +6,19 @@ Page({
    */
   data: {
 
-
-
-    // 商品信息
-    goodsList: [
-      { id: 1, name: '超级香烤韭菜', address:'地下一楼', pic:'/img/2.jpg'},
-      { id: 2, name: '陈府板鸭', address:'二楼18号', pic:'/img/2.jpg'},
-    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    const productId = options.id; // 获取从上一页传递过来的商品 ID
+    console.log(productId);
+    const itemDetail = goodsData.find(item => item.id === productId);
+    
+    this.setData({
+      itemDetail: itemDetail, // 将商品详细信息存入页面数据中
+    });
   },
 
   /**
@@ -69,15 +68,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-
-  goToDetail(event) {
-    const productId = event.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/detail/eat/eat?id=${productId}`,
-    });
-  },
-
-
+  }
 })

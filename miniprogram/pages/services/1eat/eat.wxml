@@ -1,2 +1,15 @@
 <!--pages/services/1eat/eat.wxml-->
-<text>pages/services/1eat/eat.wxml</text>
+<!-- <text>pages/services/1eat/eat.wxml</text> -->
+<view class="allMid">
+  <view class="productContainer">
+
+    <view class="product" wx:for="{{goodsList}}" wx:key="id" bindtap="goToDetail" data-id="{{item.id}}">
+      <image class="productImage" src="{{item.pic}}" mode="aspectFill"/>
+      <view class="shopInfoBox">
+        <text class="shopName">{{item.name}}    {{item.address}}</text>
+      </view>
+    </view>
+
+
+  </view>
+</view>
