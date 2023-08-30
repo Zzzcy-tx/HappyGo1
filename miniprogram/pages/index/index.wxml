@@ -1,4 +1,5 @@
 <view class="setBkGrd">
+  <image class="bkgrdPic"  src="/img/indexbg.jpg"/>
   <view class="notice-container">
     <div class="overlap-container">
       <!-- <image src="" mode=""/> -->
@@ -13,18 +14,18 @@
     </view>
   </view>
 
-  <swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#ffa" autoplay interval="4000" circular>
+  <swiper class="banner" indicator-dots indicator-color="rgba(255,255,255,0.7)" indicator-active-color="#ffa" autoplay interval="40000" circular>
     <swiper-item>
-      <image mode="aspectFill" lazy-load="true" src="/img/swipe1.jpg"></image>
+      <image class="swiper" mode="aspectFill" src="/img/swipe1.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image mode="aspectFill" lazy-load="true" src="/img/swipe2.jpg"></image>
+      <image class="swiper" mode="aspectFill" src="/img/swipe2.jpg"></image>
     </swiper-item>
     <swiper-item> 
-      <image mode="aspectFill" lazy-load="true"  src="/img/swipe3.jpg"></image>
+      <image class="swiper" mode="aspectFill" src="/img/swipe3.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image mode="aspectFill" lazy-load="true"  src="/img/swipe4.jpg"></image>
+      <image class="swiper" mode="aspectFill" src="/img/swipe4.jpg"></image>
     </swiper-item>
   </swiper>
 

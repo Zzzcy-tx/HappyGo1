@@ -19,7 +19,8 @@ Page({
    */
   onLoad(options) {
     this.setData({
-      hasUserID : wx.getStorageSync('hasUserID')
+      hasUserID : wx.getStorageSync('hasUserID'),
+      userID : wx.getStorageSync('userID'),
     })
   },
 
@@ -100,7 +101,8 @@ Page({
                   console.log('数据添加成功', res);//
                   this.setData({hasUserID : true});
                   wx.showToast({title: '已通过验证', icon: 'none', duration: 2000});
-                  wx.setStorageSync('hasUserID', hasUserID)
+                  wx.setStorageSync('hasUserID', this.data.hasUserID)
+                  wx.setStorageSync('userID', this.data.userID)
                 },
                 fail: err => {
                   console.error('数据添加失败', err);//
@@ -112,6 +114,7 @@ Page({
               this.setData({hasUserID : true});
               wx.showToast({title: '已通过认证', icon: 'none', duration: 2000})
               wx.setStorageSync('hasUserID', this.data.hasUserID)
+              wx.setStorageSync('userID', this.data.userID)
             }
             
           })
@@ -120,7 +123,8 @@ Page({
             wx.showToast({title: '网络错误请重试',icon: 'error',duration: 1500});
           });
       } else {
-        wx.showToast({title: '你不是学生！', icon: 'error', duration: 2000})
+        wx.showToast({title: '你不是学生！', icon: 'error', duration: 2000});
+        wx.setStorageSync('userID', this.data.userID);
       }
 
 

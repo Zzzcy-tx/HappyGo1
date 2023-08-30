@@ -1,0 +1,8 @@
+<!--pages/shopper/shopper.wxml-->
+<!-- <text>pages/shopper/shopper.wxml</text> -->
+
+<view class="allMid">
+  <text class="title">商家后台验码Interface</text>
+  <button type="primary" bind:tap="openCamera" >扫码</button>
+  <text class="couponNumber" user-select="true">券号：{{scanCodeMsg}}</text>
+</view>

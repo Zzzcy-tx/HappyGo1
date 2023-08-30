@@ -1,12 +1,20 @@
 
 .setBkGrd{
-  min-height: 100vh; 
   background-color: #eaf1ff;
   display: flex;
   flex-direction: column;
-  /* background-image: url("https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/bkGrd.jpeg?sign=43b11c970f97dfcfd151cd45023ca040&t=1692698312"); */
+  align-content:center;
+  height: 100vh;
+
+  /* background-image: url('https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/indexbg.jpg?sign=122e17a8c0279d45c9f23bb44a2fa94a&t=1693394867'); */
 }
 
+.bkgrdPic{
+  position:absolute;
+  width: 100vw;
+  height: 110vh;
+  z-index: 0;
+}
 
 .wxtitle{
   position: fixed;
@@ -26,6 +34,7 @@
   background-color: #eaf1ff;
   display: flex;
   align-items: center;
+  height: 5mm;
   padding: 0rpx;
 }
 
@@ -40,13 +49,13 @@
   position:absolute;
   height: 10mm;
   width: 100%;
-  background-color: #eaf1ff; /* 设置不透明的背景颜色 */
+  background-color: #c8f1f8; /* 设置不透明的背景颜色 */
 }
 
 .notice-title {
   position: relative;
   align-items: center;
-  font-size: 20rpx;
+  font-size: 18rpx;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   margin-right: 0rpx; /* 适当的间距 */
@@ -89,46 +98,41 @@
   font-size: 16rpx;
 }
 
-/* /公告栏/ */
+
 .banner {
   display: flex;
-  position: relative;
-  display: flex;
-  justify-content: center; /* 在主轴上水平居中 */
-  align-items: center; /* 在交叉轴上垂直居中 */
+  /* justify-content: center;
+  align-items: center; */
   height: 440rpx;
-  width: 750rpx;
+  width: 96vw;
   z-index: 3;
+  margin-top: 1mm;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 .banner image {
-  height: 480rpx;
+  height: 440rpx;
   width: 100%;
   z-index: 4;
 
 }
 
-.chooseSchool {
-  display: flex;
-  height: 100rpx;
-  width: 650rpx;
-  background-color: #fff;
-  border-bottom-left-radius: 15rpx;
-  border-bottom-right-radius: 15rpx;
-  border-top-left-radius: 15rpx;
-  border-top-right-radius: 15rpx;
-  position: absolute;
-  top: 430rpx;
-  left: 50rpx;
-  align-items: center;
-  justify-content: center;
+.swiper{
+  border-bottom-left-radius: 25rpx;
+  border-bottom-right-radius: 25rpx;
+  border-top-left-radius: 25rpx;
+  border-top-right-radius: 25rpx;
+
+  /* margin-left: 1mm;
+  margin-right: 1mm; */
 }
 
 .chooseService {
   display: float;
   width: auto;
   margin-top: 40rpx;
-
+  z-index: 10;
 }
 
 .Sever01{
@@ -146,7 +150,7 @@
   background-color: #fff;
   width: 40.5%;
   height: auto;
-  background-color: blanchedalmond;
+  background-color: #fef2d8;
   justify-content: center; /* 在主轴上水平居中 */
   align-items: center; /* 在交叉轴上垂直居中 */
   border-bottom-left-radius: 25rpx;
