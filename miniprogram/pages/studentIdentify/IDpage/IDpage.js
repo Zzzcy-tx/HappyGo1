@@ -10,7 +10,7 @@ Page({
    */
   data: {
     hasUserID: false,
-    userID: '0000000000',
+    userID: wx.getStorageSync('userID'),
     certificatedState: "false"
   },
 
@@ -111,8 +111,11 @@ Page({
               })
 
             } else {
-              this.setData({hasUserID : true});
+              this.setData({
+                hasUserID : true,
+              });
               wx.showToast({title: '已通过认证', icon: 'none', duration: 2000})
+              console.log(this.data.userID)
               wx.setStorageSync('hasUserID', this.data.hasUserID)
               wx.setStorageSync('userID', this.data.userID)
             }

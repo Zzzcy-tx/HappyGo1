@@ -75,7 +75,7 @@ Page({
   goToDetail(event) {
     const productId = event.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/detail/eat/eat?id=${productId}`,
+      url: `/pages/detail/eat/eat?id=${productId}`,
     });
   },
 

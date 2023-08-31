@@ -21,7 +21,7 @@
     "pages/studentIdentify/suc/suc",
     "pages/studentIdentify/IDpage/IDpage",
     "pages/myCoupon/myCoupon",
-    "detail/eat/eat",
+    "pages/detail/eat/eat",
     "pages/shopper/shopper"
   ],
   "window": {

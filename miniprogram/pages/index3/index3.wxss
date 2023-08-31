@@ -6,6 +6,7 @@ page {
 
 .index3{
   height: 130vh;
+  z-index: 2;
 }
 
 .level {
@@ -13,9 +14,15 @@ page {
   align-items: center;
 }
 
+.bkgrdpic{
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+}
+
 /* 状态栏 */
 .bar-box {
-  background-image: url("https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230827150935.jpg?sign=db50fc4cd71418e2db08519da6283583&t=1693448059");
+  background-image: url("https://636c-cloud1-5g85yvcr970da140-1320139531.tcb.qcloud.la/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230827150935.jpg?sign=c613cccabc3eacb84351a26b5f36000e&t=1693448283");
   background-color: #f1f1f1;
   position: static;
   top: 0;
@@ -45,6 +52,7 @@ page {
   height: 60px;
   border-radius: 50%;
   background-color: #636262;
+  z-index: 4;
 }
 
 .welcome {
@@ -52,6 +60,7 @@ page {
   flex-direction: column;
   margin-left: 20rpx;
   color: white;
+  z-index: 4;
 }
 
 .nick {

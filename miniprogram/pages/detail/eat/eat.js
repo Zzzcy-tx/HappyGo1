@@ -1,4 +1,5 @@
 // detail/eat/eat.js
+
 const app=getApp();
 
 Page({
@@ -7,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    codeReady: false,
+    codeReady: true,
     userID: wx.getStorageSync('userID'),
   },
 
@@ -16,6 +17,7 @@ Page({
    */
   onLoad(options) {
     const productId = options.id; // 获取从上一页传递过来的商品 ID
+    const shopID = options.id;
     console.log(productId);
 
     //显示商品详情//
@@ -27,11 +29,12 @@ Page({
     wx.cloud.callFunction({
       name: 'generateRandomCouponCode',
       data: {
+        shopID: shopID,
         userID: this.data.userID,
       },
       success: res => {
         console.log(res.result);
-        const randomCouponCode = res.result.couponCode;
+        const CouponCode = res.result.couponCode;
         this.setData({codeReady: true});
         // app.globalData.randomCouponCode = randomCouponCode;
         // console.log(app.globalData.randomCouponCode);//全局变量
@@ -46,7 +49,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    this.drawQRCode('jhhkgh')
   },
 
   /**
@@ -89,5 +92,14 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+
+  drawQRCode: function (text) {
+
+
   }
+
+
+
 })
