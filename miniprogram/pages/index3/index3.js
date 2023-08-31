@@ -178,13 +178,22 @@ Page({
     })
   },
 
+  shoppers(){
+    wx.navigateTo({
+      url: '/pages/shopper/shopper',
+    })
+  },
+
+
+
+
   //调用云函数解密手机号
   getPhoneNumber(e) {
     console.log(e.detail.code)    // 动态令牌
     console.log(e.detail.errMsg)  // 回调信息（成功失败都会返回）
     console.log(e.detail.iv)  
     console.log(e.detail.errno)   // 错误码（失败时返回）
-    if (e.detail.errMsg === "getPhoneNumber:ok" || true) {
+    if (e.detail.errMsg === "getPhoneNumber:ok") {
       const encryptedData = e.detail.encryptedData;
       const iv = e.detail.iv;
       

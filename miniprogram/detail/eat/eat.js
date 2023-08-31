@@ -1,11 +1,14 @@
 // detail/eat/eat.js
+const app=getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    codeReady: false,
+    userID: wx.getStorageSync('userID'),
   },
 
   /**
@@ -14,10 +17,28 @@ Page({
   onLoad(options) {
     const productId = options.id; // 获取从上一页传递过来的商品 ID
     console.log(productId);
-    const itemDetail = goodsData.find(item => item.id === productId);
-    
-    this.setData({
-      itemDetail: itemDetail, // 将商品详细信息存入页面数据中
+
+    //显示商品详情//
+    // const itemDetail = goodsData.find(item => item.id === productId);
+    // this.setData({
+    //   itemDetail: itemDetail, // 将商品详细信息存入页面数据中
+    // });
+    console.log(this.data.userID);
+    wx.cloud.callFunction({
+      name: 'generateRandomCouponCode',
+      data: {
+        userID: this.data.userID,
+      },
+      success: res => {
+        console.log(res.result);
+        const randomCouponCode = res.result.couponCode;
+        this.setData({codeReady: true});
+        // app.globalData.randomCouponCode = randomCouponCode;
+        // console.log(app.globalData.randomCouponCode);//全局变量
+      },
+      fail: err => {
+        console.error(err);
+      }
     });
   },
 

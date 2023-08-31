@@ -7,6 +7,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/shopper/shopper",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/services/1eat/eat",
           "query": "",
           "launchMode": "default",

@@ -1,5 +1,5 @@
 <view class="index3">
-  <view class="bar-box" style="height: 20%;">
+  <view class="bar-box" bind:longpress="shoppers" style="height: 20%;">
       <view class="level" style="margin-top: {{barHeight*2}}px;">
           <view class="level bar" bindtap="headClick" wx:if="true">
             <block wx:if="{{!hasUserInfo}}">

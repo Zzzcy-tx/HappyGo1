@@ -1,5 +1,9 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
+<<<<<<< HEAD
+=======
+const db = wx.cloud.database()
+>>>>>>> a571dec4ff7e50a9b218d8181c95074ca1bfac6a
 
 cloud.init({ env: cloud.DYNAMIC_CURRENT_ENV }) // 使用当前云环境
 

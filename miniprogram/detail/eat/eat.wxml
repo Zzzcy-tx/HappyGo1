@@ -1,2 +1,15 @@
 <!--detail/eat/eat.wxml-->
-<text>detail/eat/eat.wxml</text>
+<!-- <text>detail/eat/eat.wxml</text> -->
+
+
+<view class="allmid">
+  <block wx:if="{{codeReady}}">
+    
+  </block>
+  <block wx:else>
+    <text>Wait......</text>
+  </block>
+
+
+
+</view>
