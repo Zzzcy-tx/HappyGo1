@@ -40,20 +40,20 @@
       {
         "text": "首页",
         "pagePath": "pages/index/index",
-        "iconPath": "/img/le.png",
-        "selectedIconPath": "/img/he.png"
+        "iconPath": "/img/icon1.png",
+        "selectedIconPath": "/img/icon2.png"
       },
       {
         "text": "圈子",
         "pagePath": "pages/index2/index2",
-        "iconPath": "/img/le.png",
-        "selectedIconPath": "/img/he.png"
+        "iconPath": "/img/icon3.png",
+        "selectedIconPath": "/img/icon4.png"
       },
       {
         "text": "我的",
         "pagePath": "pages/index3/index3",
-        "iconPath": "/img/le.png",
-        "selectedIconPath": "/img/he.png"
+        "iconPath": "/img/icon5.png",
+        "selectedIconPath": "/img/icon6.png"
       }
     ]
   },
