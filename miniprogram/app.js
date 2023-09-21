@@ -1,4 +1,6 @@
 // app.js
+
+const QRCode = require('weapp-qrcode'); // 请确保已经安装了 qrcode 模块
 App({
   globalData: {
     randomCouponCode: '',
@@ -20,3 +22,4 @@ App({
     this.globalData = {};
   }
 });
+

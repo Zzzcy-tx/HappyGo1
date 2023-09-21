@@ -1,6 +1,9 @@
 // detail/eat/eat.js
 
 const app=getApp();
+const QRCode = require('weapp-qrcode'); // 请确保已经安装了 qrcode 模块
+import drawQrcode from 'weapp-qrcode';
+
 
 Page({
 
@@ -10,6 +13,7 @@ Page({
   data: {
     codeReady: true,
     userID: wx.getStorageSync('userID'),
+    couponCode: ' ',
   },
 
   /**
@@ -34,10 +38,13 @@ Page({
       },
       success: res => {
         console.log(res.result);
-        const CouponCode = res.result.couponCode;
+        this.setData({couponCode: res.result.couponCode})
+        //const CouponCode = res.result.couponCode;
         this.setData({codeReady: true});
         // app.globalData.randomCouponCode = randomCouponCode;
         // console.log(app.globalData.randomCouponCode);//全局变量
+        console.log(this.data.couponCode);
+        this.generateQRCode(this.data.couponCode);
       },
       fail: err => {
         console.error(err);
@@ -49,7 +56,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-    this.drawQRCode('jhhkgh')
+
   },
 
   /**
@@ -95,10 +102,16 @@ Page({
   },
 
 
-  drawQRCode: function (text) {
 
-
-  }
+  generateQRCode: function (text) {
+    console.log(text);
+    drawQrcode({
+      width: 200,
+      height: 200,
+      canvasId: 'qrcode',
+      text: text,
+    })
+  },
 
 
 

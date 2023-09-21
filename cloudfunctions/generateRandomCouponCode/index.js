@@ -20,7 +20,7 @@ exports.main = async (event, context) => {
   // 插入数据库记录
   const res = await db.collection('shop_try')
     .where({
-      'userID': this.data.userID,
+      'userID': userID,
     })
     .get()
     if(res.data.length > 0){
