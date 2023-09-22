@@ -2,9 +2,22 @@
 <!-- <text>detail/eat/eat.wxml</text> -->
 
 
-<view class="allmid">
+<view>
   <block wx:if="{{codeReady}}">
-    <canvas style="width: 200px; height: 200px;" canvas-id="qrcode"></canvas>
+    <view class="allMid">
+      <view class="blankBar"></view>
+      <text class="titleText">出示给商家</text>
+      <view class="blankBar"></view>
+      <block wx:if="{{!isUsed}}">
+        <canvas style="width: 250px; height: 250px;" canvas-id="qrcode"></canvas>
+      </block>
+      <block wx:else>
+        <text class="containText">您的券已使用！</text>
+        <view class="blankBar"></view>
+        <text class="containText">如需一个月内在同一店家多次使用，请重复购买学生优惠。</text>
+      </block>
+      <view class="blankBar"></view>
+    </view>
   </block>
   <block wx:else>
     <text>Wait......</text>

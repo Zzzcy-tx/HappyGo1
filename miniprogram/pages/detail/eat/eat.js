@@ -1,7 +1,9 @@
 // detail/eat/eat.js
 
 const app=getApp();
-const QRCode = require('weapp-qrcode'); // 请确保已经安装了 qrcode 模块
+const QRCode = require('weapp-qrcode');
+const db = wx.cloud.database();
+var userID;
 import drawQrcode from 'weapp-qrcode';
 
 
@@ -14,15 +16,28 @@ Page({
     codeReady: true,
     userID: wx.getStorageSync('userID'),
     couponCode: ' ',
+    isUsed: false,
+    collectionName: ' ',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    const productId = options.id; // 获取从上一页传递过来的商品 ID
+    userID = this.data.userID;
     const shopID = options.id;
-    console.log(productId);
+    console.log(shopID);
+    switch (shopID){
+      case '1':
+        this.data.collectionName = 'shop1';
+        break
+      case '2':
+        this.data.collectionName = 'shop2';
+        break;
+      default:
+        break;
+    }
+    console.log(this.data.collectionName);
 
     //显示商品详情//
     // const itemDetail = goodsData.find(item => item.id === productId);
@@ -35,16 +50,18 @@ Page({
       data: {
         shopID: shopID,
         userID: this.data.userID,
+        collectionName: this.data.collectionName,
       },
       success: res => {
         console.log(res.result);
-        this.setData({couponCode: res.result.couponCode})
-        //const CouponCode = res.result.couponCode;
-        this.setData({codeReady: true});
-        // app.globalData.randomCouponCode = randomCouponCode;
-        // console.log(app.globalData.randomCouponCode);//全局变量
-        console.log(this.data.couponCode);
-        this.generateQRCode(this.data.couponCode);
+        if(res.result != '0' && res.result != '1'){
+          this.setData({couponCode: res.result.couponCode})
+          this.setData({codeReady: true});
+          this.setData({isUsed: res.result.isUsed});
+          this.generateQRCode(this.data.couponCode);
+        } else {
+          console.log('用户不存在！');
+        }
       },
       fail: err => {
         console.error(err);
@@ -77,7 +94,33 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-
+    db.collection('shop1')
+      .where({
+        'userID': this.data.userID,
+      })
+      .get()
+      .then(res =>{
+        console.log('查询结果：', res.data);
+        if(res.data.length > 0){
+          db.collection(this.data.collectionName)
+          .doc(res.data[0]._id)
+          .update({
+            data: {
+              userCerti: false,
+              updateAt: new Date()
+            },
+            success: suc =>{
+              console.log('用户退出扫码界面', suc);
+            },
+            fail: err => {
+              console.error('用户退出扫码界面失败', err);
+            },
+          });
+        }
+      })
+    .catch((err) =>{
+      console.log(err)
+    })
   },
 
   /**
@@ -104,10 +147,9 @@ Page({
 
 
   generateQRCode: function (text) {
-    console.log(text);
     drawQrcode({
-      width: 200,
-      height: 200,
+      width: 250,
+      height: 250,
       canvasId: 'qrcode',
       text: text,
     })

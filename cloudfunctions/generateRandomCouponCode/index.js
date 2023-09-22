@@ -7,36 +7,41 @@ const db = cloud.database();
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
-  
+  const collectionName = event.collectionName
   const userID = event.userID;
-  const shopID = event.shopID;
   console.log(userID);
 
 
-
+  var isUsed = false;
   // 生成随机券码
   const couponCode = generateCouponCode();
-  console.log(couponCode);
+  console.log(collectionName);
   // 插入数据库记录
-  const res = await db.collection('shop_try')
+  const res = await db.collection(collectionName)
     .where({
       'userID': userID,
     })
     .get()
     if(res.data.length > 0){
-      if(res.data.isUsed === false){  //还未使用
-        await db.collection('shop_try')
+      console.log(res.data[0].isUsed)
+      isUsed = res.data[0].isUsed;
+      if(res.data[0].isUsed === false){  //还未使用
+        await db.collection(collectionName)
           .doc(res.data[0]._id)
           .update({
             data: {
               couponCode: couponCode,
               userCerti: true,
-              updateAt: new Data()
+              updateAt: new Date()
+            },
+            success: suc =>{
+              console.log('成功更新', suc);
+              return couponCode;
             },
             fail: err => {
               console.error('券码添加失败', err);
               return '1';
-            }
+            },
           });
       }
     } else {
@@ -46,7 +51,7 @@ exports.main = async (event, context) => {
 
 
   return {
-    couponCode,
+    couponCode,isUsed,
   };
 
 }

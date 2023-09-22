@@ -3,10 +3,29 @@
 .allMid{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   align-items: center;
   /* justify-content: center; */
 
-  height: 100vh;
-  width: 100vw;
+}
+
+
+.mid{
+  display: flex;
+  align-items: center;
+}
+
+.titleText{
+  font-size: xx-large;
+  font-weight: 550;
+}
+
+.containText{
+  font-size: x-large;
+}
+
+.blankBar{
+  height: 5vh;
 }

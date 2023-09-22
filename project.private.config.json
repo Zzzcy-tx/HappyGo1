@@ -6,6 +6,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "eat",
+          "pathName": "pages/detail/eat/eat",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "",
           "pathName": "pages/shopper/shopper",
           "query": "",

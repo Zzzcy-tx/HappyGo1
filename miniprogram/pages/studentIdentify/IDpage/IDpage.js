@@ -83,7 +83,7 @@ Page({
   confirmID:function(){
     // console.log('1')
     if(this.data.userID.length === 18 && validateIDCard(this.data.userID) ){
-      if((getDigit(this.data.userID, 6,10) === '2004' || getDigit(this.data.userID, 6,10) === '2003')){
+      if((getDigit(this.data.userID, 6,10) === '2004' || getDigit(this.data.userID, 6,10) === '2003' || getDigit(this.data.userID, 6,10) === '2005') ){
         db.collection(collectionName)
           .where({
             'userID': this.data.userID,
