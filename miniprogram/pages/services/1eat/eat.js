@@ -1,3 +1,4 @@
+const db = wx.cloud.database();
 // pages/services/1eat/eat.js
 Page({
 
@@ -19,7 +20,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    
+    db.collection('eatDetail') // 替换成您的集合名称
+      .get()
+      .then(res => {
+        const productList = res.data; // 获取商品列表
+        console.log('店铺列表获取成功：', productList);
+      })
+      .catch(err => {
+        console.error('查询商品信息失败', err);
+      });
   },
 
   /**
