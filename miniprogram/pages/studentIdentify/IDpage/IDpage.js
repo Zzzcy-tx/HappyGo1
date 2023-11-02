@@ -134,9 +134,19 @@ Page({
     } else {
       wx.showToast({title: '请输入格式正确的身份证号',icon: 'none',duration: 2000})
     }
+  },
+
+  purchase:function(){
+    let self = this;
+    console.log(self.data.userID);
+    //weixin
+    createOrder();
+
+
+    //zhifu
+    
+
   }
-
-
 
   
 })
@@ -199,4 +209,85 @@ function validateIDCard(idCard) {
   }
 
   return true;
+}
+
+function createOrder() {
+  // “创建订单”按钮时调用的函数
+  let orderInfo = {
+    productId: '0',
+    productName: '30天学生优惠（普通）',
+    productPrice: 9.9,
+  };
+  wx.cloud.callFunction({
+    name: 'createOrder', // 云函数名称
+    data: orderInfo,
+    success(res) {
+      if (res.result && res.result.success) {
+        // 订单创建成功后的操作
+        console.log('订单创建成功', res.result);
+        // 支付操作
+
+        //成功后的操作
+        afterBill();
+      } else {
+        // 订单创建失败的操作
+        console.error('订单创建失败', res.result.message);
+      }
+    },
+    fail(err) {
+      // 网络请求或服务器响应失败的操作
+      console.error('云函数调用失败:', err);
+    }
+  });
+}
+
+function afterBill(){
+  let self=this;
+  var userID = this.data;
+  console.log(this.data.userID);
+  db.collection("shop1")
+    .where({'userID': userID})
+    .get()
+    .then(res =>{
+      console.log(res.data);
+      if(res.data.length ===1){
+        db.collection("shop1").doc(res.data[0]._id)
+        .update({
+          data:  {
+            isUsed : false,
+            userCerti : false,
+            updateAt: new Date()
+          },
+          success: function(res){
+            if (res.stats.updated === 0) {//没有更新数据
+              db.collection("shop1").add({
+                data: {
+                  userID: self.data.userID,
+                  isUsed: false,
+                  userCerti : false,
+                }
+              })
+            } else {
+              console.log(res,"购买成功");
+              wx.showToast({title: '购买成功',icon: 'success',duration: 2000})
+            }        
+          }
+        })
+      }else if (res.data.length === 0) {
+        db.collection("shop1").add({
+          data: {
+            userID: self.data.userID,
+            isUsed: false,
+            userCerti: false,
+            updateAt: new Date(),
+          }
+        }).then(addResult => { // 正确使用then来处理Promise
+          console.log("记录添加成功", addResult);
+          wx.showToast({title: '购买成功',icon: 'success',duration: 2000});
+        }).catch(error => {
+          // 这里是处理错误的地方
+          console.error("记录添加失败", error);
+        });
+      }
+    })
 }
