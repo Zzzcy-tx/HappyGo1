@@ -154,9 +154,6 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
-
-
-
         try{
           wx.setStorageSync('hasUserInfoKey',this.data.hasUserInfo)
           wx.setStorageSync('userInfoKey',this.data.userInfo)
@@ -167,6 +164,12 @@ Page({
 
         wx.showToast({title: '登陆成功',icon: 'success',duration: 2000})
       }
+    })
+    wx.login({
+      success: (res) => {
+        console.log(res.code);
+        wx.setStorageSync('userCode',res.code);
+      },
     })
   },
 
@@ -189,16 +192,10 @@ Page({
 
   //调用云函数解密手机号
   getPhoneNumber(e) {
-    console.log(e.detail.code)    // 动态令牌
-    console.log(e.detail.errMsg)  // 回调信息（成功失败都会返回）
-    console.log(e.detail.iv)  
-    console.log(e.detail.errno)   // 错误码（失败时返回）
-    if (e.detail.errMsg === "getPhoneNumber:ok") {
-      const encryptedData = e.detail.encryptedData;
-      const iv = e.detail.iv;
-      
+ 
       wx.login({
         success: res => {
+          console.log(res.code);
           if (res.code) {
             this.setData({ phoneNumber : this.getPhoneNumber({"code": res.code}) })
             console.log(this.data.phoneNumber);
@@ -210,9 +207,7 @@ Page({
           console.error('wx.login调用失败:', err);
         }
       });
-    } else {
-      console.log('用户拒绝授权手机号码');
-    }
+
   }
 
 

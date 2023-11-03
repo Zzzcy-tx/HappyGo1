@@ -140,7 +140,7 @@ Page({
     let self = this;
     console.log(self.data.userID);
     //weixin
-    createOrder();
+    createOrder(this);
 
 
     //zhifu
@@ -211,24 +211,38 @@ function validateIDCard(idCard) {
   return true;
 }
 
-function createOrder() {
+function createOrder(pageInstance) {
   // “创建订单”按钮时调用的函数
   let orderInfo = {
     productId: '0',
     productName: '30天学生优惠（普通）',
     productPrice: 9.9,
+    productBody: '一个很值的优惠',
+    userID: pageInstance.data.userID,
+    userCode: wx.getStorageSync('userCode'),
   };
+  console.log(orderInfo);
   wx.cloud.callFunction({
     name: 'createOrder', // 云函数名称
-    data: orderInfo,
+    data: orderInfo, 
     success(res) {
-      if (res.result && res.result.success) {
+      if (res.result) {
         // 订单创建成功后的操作
         console.log('订单创建成功', res.result);
         // 支付操作
-
+        wx.requestPayment(
+          {
+          "timeStamp":res.result.timeStamp,
+          "nonceStr": "",
+          "package": "",
+          "signType": "MD5",
+          "paySign": "",
+          "success":function(res){},
+          "fail":function(res){},
+          "complete":function(res){}
+          }) 
         //成功后的操作
-        afterBill();
+        afterBill(pageInstance);
       } else {
         // 订单创建失败的操作
         console.error('订单创建失败', res.result.message);
@@ -241,10 +255,9 @@ function createOrder() {
   });
 }
 
-function afterBill(){
-  let self=this;
-  var userID = this.data;
-  console.log(this.data.userID);
+function afterBill(pageInstance){
+  console.log(pageInstance.data.userID);
+  const userID = pageInstance.data.userID;
   db.collection("shop1")
     .where({'userID': userID})
     .get()
