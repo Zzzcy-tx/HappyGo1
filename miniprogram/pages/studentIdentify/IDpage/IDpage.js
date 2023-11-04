@@ -216,7 +216,7 @@ function createOrder(pageInstance) {
   let orderInfo = {
     productId: '0',
     productName: '30天学生优惠（普通）',
-    productPrice: 9.9,
+    productPrice: 990,
     productBody: '一个很值的优惠',
     userID: pageInstance.data.userID,
     userCode: wx.getStorageSync('userCode'),
@@ -230,19 +230,16 @@ function createOrder(pageInstance) {
         // 订单创建成功后的操作
         console.log('订单创建成功', res.result);
         // 支付操作
-        wx.requestPayment(
-          {
-          "timeStamp":res.result.timeStamp,
-          "nonceStr": "",
-          "package": "",
-          "signType": "MD5",
-          "paySign": "",
-          "success":function(res){},
-          "fail":function(res){},
-          "complete":function(res){}
-          }) 
-        //成功后的操作
-        afterBill(pageInstance);
+        wx.requestPayment({
+          ...res.result.payment,
+          success (res) {
+            console.log('pay success', res)
+            afterBill(pageInstance);
+          },
+          fail (err) {
+            console.error('pay fail', err)
+          }
+        }) 
       } else {
         // 订单创建失败的操作
         console.error('订单创建失败', res.result.message);
@@ -289,7 +286,7 @@ function afterBill(pageInstance){
       }else if (res.data.length === 0) {
         db.collection("shop1").add({
           data: {
-            userID: self.data.userID,
+            userID: pageInstance.data.userID,
             isUsed: false,
             userCerti: false,
             updateAt: new Date(),

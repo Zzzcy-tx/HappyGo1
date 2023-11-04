@@ -28,15 +28,14 @@ exports.main = async (event, context) => {
   const db = cloud.database()
   orderInfo = event//传过来的
 
-
   const res = await cloud.cloudPay.unifiedOrder({
     "body" : orderInfo.productName, // 商品描述
-    "outTradeNo" : "1217752501201407033233368018", // 商户订单号
+    "outTradeNo" : orderInfo.productPrice.toString() + Date.now().toString(), // 商户订单号
     "spbillCreateIp" : '58.247.0.18', // 终端 IP
     "subMchId" : "1656209427", // 商户号
     "totalFee" : orderInfo.productPrice, // 总金额
     "envId": "zcy-cloud-0g299nq9f08dce4b", // 云函数环境名称
-    "functionName": "generateRandomCouponCode", // 支付结果通知回调云函数名
+    "functionName": "paymentSuc", // 支付结果通知回调云函数名
   })
   res.result = true;
   console.log(res);
